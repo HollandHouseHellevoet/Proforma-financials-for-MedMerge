@@ -14,12 +14,13 @@ This repo is configured to deploy to Netlify as a static site using **docsify** 
 
 That's it. Netlify will publish the site at a `*.netlify.app` URL within ~30 seconds.
 
-## Recommended: gate access (since this contains sensitive financial detail)
+## Access control
 
-Captive proformas are confidential. In the Netlify dashboard, after deploy:
+This site is configured to deploy **public** — anyone with the URL can read the proforma. That's the simplest setup for sharing with partners and investors directly.
 
-- **Site settings → Visitor access → Site protection** → enable **Site password** (free tier) or **Single sign-on / Identity** (paid tier) for per-user access
-- Or restrict by **Role-based access control** if you connect to your IdP
+If you later decide to gate access, Netlify supports it without any repo changes:
+
+- **Site settings → Visitor access → Site protection** → enable **Site password** (paid tier) or **Single sign-on / Identity** for per-user access
 - Optionally lock down to a custom domain (e.g. `proforma.medmerge.com`) under **Domain management**
 
 ## Local preview
