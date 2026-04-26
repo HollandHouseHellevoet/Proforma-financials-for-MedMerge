@@ -1,0 +1,13 @@
+captive,line_of_coverage,exposure_basis,unit_count,rate,gross_written_premium_y1,notes
+Health Captive (MT),Group Medical + Rx,Covered lives PMPM,20050,550,132330000,20050 lives x $550 PMPM x 12; net of stop-loss handled separately
+Casualty Captive (VT),Medical Malpractice,Surgeons (specialty-weighted),2500,49910,124775000,Sum from data/specialty_mix.csv
+Casualty Captive (VT),General Liability,Per surgeon,2500,800,2000000,Premises / operations liability
+Casualty Captive (VT),Employment Practices Liability,Total employees ~10300,10300,117,1200000,Allocated EPLI premium
+Casualty Captive (VT),Directors & Officers,Flat allocation,1,750000,750000,Group D&O tower base
+Casualty Captive (VT),Cyber Liability,Lives basis,20050,35,700000,PHI exposure; placeholder pending IT environment review
+Casualty Captive (VT),Auto Liability,Fleet vehicles,n/a,n/a,350000,Owned/non-owned auto for clinic operations
+Casualty Captive (VT),CASUALTY SUBTOTAL,,,,129775000,MedMal ~96% of Casualty captive premium
+Property Captive (Cayman),Property,Total Insured Value (TIV),300000000,0.20%,600000,Placeholder TIV; replace with actual SOV
+Property Captive (Cayman),Business Interruption,Included in TIV rate,,,200000,12-month BI on critical ASCs
+Property Captive (Cayman),PROPERTY SUBTOTAL,,,,800000,Strategic captive; small premium
+PROGRAM TOTAL,,,,,262905000,Y1 gross written premium across all 3 captives

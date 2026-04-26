@@ -1,0 +1,9 @@
+scenario,description,health_loss_ratio,medmal_loss_ratio,property_loss_ratio,other_casualty_loss_ratio,medical_trend,consolidated_y1_nur,delta_vs_base,commentary
+Base case,Target loss ratios as priced,78.0%,60.0%,45.0%,55.0%,6.5%,44523117,0,Plan-of-record proforma assumption
+Favorable,Loss ratios -10pts each line; trend held,68.0%,50.0%,35.0%,45.0%,6.5%,71683867,27160750,Strong year + good claim emergence; surplus accelerates
+Adverse - all lines,Loss ratios +10pts each line,88.0%,70.0%,55.0%,65.0%,6.5%,17362367,-27160750,Still profitable; demonstrates structural margin
+Severe - MedMal shock,MedMal loss ratio +20pts (severity event),78.0%,80.0%,45.0%,55.0%,6.5%,29550117,-14973000,Single bad MedMal year; aggregate stop-loss caps further downside
+Severe - Health shock,Health LR +15pts (pandemic / large claimant cluster),93.0%,60.0%,45.0%,55.0%,6.5%,28837507,-15685610,Aggregate stop-loss limits worst case at 125% of expected
+Trend acceleration,Medical trend +2pts; loss ratios held (priced too low),81.0%,60.0%,45.0%,55.0%,8.5%,40554196,-3968921,Captive can re-rate at renewal; one-year impact only
+Compound stress,All adverse + trend +2pts,88.0%,70.0%,55.0%,65.0%,8.5%,13393446,-31129671,Consolidated still positive due to investment income and structural margin
+Property cat event,Property losses 10x (single cat),78.0%,60.0%,450.0%,55.0%,6.5%,41283117,-3240000,Per-occurrence reinsurance caps property captive loss at $1M retention

@@ -1,0 +1,7 @@
+captive,domicile,statutory_minimum_capital,working_capital_y1_initial_funding,target_surplus_end_y3,net_retained_premium_y1,capital_to_net_premium_ratio_y1,capital_to_net_premium_ratio_y3,notes
+Health Captive (MT),Montana,1000000,10000000,25000000,123730000,8.1%,20.2%,Existing captive may already hold surplus; $10M is incremental funding for new group; ratio grows via underwriting profit
+Casualty Captive (VT) - MedMal pool,Vermont,n/a (notional),22500000,67500000,107305000,21.0%,62.9%,Long-tail line requires highest capitalization; sized to support ~25M aggregate retention with 1.5x buffer
+Casualty Captive (VT) - Other Casualty pool,Vermont,n/a (notional),2500000,7500000,4500000,55.6%,166.7%,Smaller pool; capital-heavy ratio reflects volatility of cyber/D&O severity tails
+Casualty Captive (VT) - Total entity,Vermont,1000000,25000000,75000000,111805000,22.4%,67.1%,Sum of MedMal + Other Casualty notional pools
+Property Captive (Cayman),Cayman,250000,750000,1500000,600000,125.0%,250.0%,Small premium / low ratio not meaningful; sized to absorb 1-2 retentions ($1M-$2M) without surplus impairment
+TOTAL,,2250000,35750000,101500000,236135000,15.1%,43.0%,Initial capital injection $35.75M; target surplus by end Y3 ~$101.5M before underwriting profit accretion

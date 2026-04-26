@@ -1,0 +1,10 @@
+specialty,assumed_pct_of_roster,surgeon_count,commercial_mature_rate_per_surgeon,captive_rate_per_surgeon,captive_premium,severity_band,frequency_per_100_surgeons,notes
+ER,25.0%,625,35000,30000,18750000,Moderate-high,5.5,High volume / moderate severity; ED EMTALA exposure
+Orthopedic,20.0%,500,65000,55000,27500000,High,4.8,Post-op infection / hardware failure drivers
+General Surgery,15.0%,375,65000,55000,20625000,High,5.0,Bowel injury / retained foreign body severity
+Interventional Pain,10.0%,250,52000,45000,11250000,Moderate-high,4.0,Spinal injection complications; rising frequency
+Dermatology,10.0%,250,16000,14000,3500000,Low,2.5,Lower severity but Mohs / cosmetic claims rising
+Spine,8.0%,200,130000,110000,22000000,Very high,5.5,Catastrophic neuro injury claims; >$2M severity tail
+ENT,7.0%,175,32000,28000,4900000,Moderate,3.5,Airway / nerve injury; modest frequency
+Neurosurgery,5.0%,125,155000,130000,16250000,Catastrophic,6.0,Highest severity per claim; cranial / spinal cord
+TOTAL,100.0%,2500,n/a,~$49910 weighted avg,124775000,,Weighted average captive premium ~$49.9k per surgeon

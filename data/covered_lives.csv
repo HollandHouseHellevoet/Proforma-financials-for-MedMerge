@@ -1,0 +1,5 @@
+group,headcount_basis,headcount,dependent_multiplier,covered_lives,notes
+Physician group - surgeons,Surgeon roster,2500,n/a (input to employee derivation),n/a,2500 surgeons across 8 specialties
+Physician group - employees,Surgeons x 3 employees per surgeon,7500,2.30,17250,Per MedMerge convention: 1 surgeon = 3 employees; 2.3 lives multiplier captures spouses/dependents
+White collar group,Benefits-eligible lives (already includes dependents),2800,1.00,2800,Per MedMerge direction: 2800 figure is total covered lives not employees
+TOTAL,,,,20050,Health captive premium basis

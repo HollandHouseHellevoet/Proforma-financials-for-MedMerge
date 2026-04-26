@@ -1,0 +1,42 @@
+captive,line_item,Y1,Y2,Y3,trend_assumption,notes
+Health Captive (MT),Gross Written Premium,132330000,140931450,150091994,6.5% medical trend,From data/premiums.csv
+Health Captive (MT),Ceded Premium (stop-loss),-8600000,-9159000,-9754335,6.5%,Specific + aggregate stop-loss
+Health Captive (MT),Net Earned Premium,123730000,131772450,140337659,,
+Health Captive (MT),Gross Incurred Losses,-103217400,-109926531,-117071656,6.5%,78% loss ratio
+Health Captive (MT),Stop-Loss Recoveries,7940000,8456100,9005747,6.5%,Assumed equal to specific stop-loss premium
+Health Captive (MT),Net Incurred Losses,-95277400,-101470431,-108065909,,
+Health Captive (MT),TPA / Claims Admin,-10586400,-11274516,-12007360,5.2% admin trend,8% of GWP
+Health Captive (MT),Captive Operating Expenses,-750000,-772500,-795675,3.0%,Manager / actuary / audit / regulator fees
+Health Captive (MT),Premium Tax (MT 0.4%),-494920,-527090,-561351,,On net premium
+Health Captive (MT),Investment Income,1000000,1800000,2680000,4.0% yield,On surplus + reserves
+Health Captive (MT),Net Underwriting Result,17621280,19527913,21587364,,
+Casualty Captive (VT),Gross Written Premium,129775000,133668250,137678298,3.0% rate trend,From data/premiums.csv (MedMal $124.8M + Other $5M)
+Casualty Captive (VT),Ceded Premium (XOL),-17970000,-18509100,-19064373,3.0%,MedMal $17.47M + Other Casualty $0.5M
+Casualty Captive (VT),Net Earned Premium,111805000,115159150,118613925,,
+Casualty Captive (VT),Gross Incurred Losses,-77442500,-79765775,-82158748,3.0%,Sum of MedMal $74.9M + GL $1.1M + EPLI $0.6M + D&O $0.3M + Cyber $0.4M + Auto $0.2M
+Casualty Captive (VT),Reinsurance Recoveries,1000000,1030000,1060900,3.0%,Modest in Y1 for long-tail; grows over time
+Casualty Captive (VT),Net Incurred Losses,-76442500,-78735775,-81097848,,
+Casualty Captive (VT),LAE (Loss Adjustment Expense),-9283400,-9561902,-9848759,3.0%,12% of MedMal loss + ~10% of other casualty
+Casualty Captive (VT),Captive Operating Expenses,-1500000,-1545000,-1591350,3.0%,Captive manager + claims handling + actuary + audit
+Casualty Captive (VT),Premium Tax (VT 0.214%),-239263,-246441,-253834,,On net premium
+Casualty Captive (VT),Investment Income,2500000,5200000,8800000,4.0% yield,Long-tail reserves accumulate; investment income grows materially
+Casualty Captive (VT),Net Underwriting Result,26839837,30270032,34622134,,
+Property Captive (Cayman),Gross Written Premium,800000,824000,848720,3.0%,From data/premiums.csv
+Property Captive (Cayman),Ceded Premium,-200000,-206000,-212180,3.0%,Per-risk + cat treaties
+Property Captive (Cayman),Net Earned Premium,600000,618000,636540,,
+Property Captive (Cayman),Net Incurred Losses,-360000,-370800,-381924,3.0%,45% loss ratio
+Property Captive (Cayman),LAE,-18000,-18540,-19096,,5% of loss
+Property Captive (Cayman),Captive Operating Expenses,-200000,-206000,-212180,3.0%,Lean Cayman cell structure
+Property Captive (Cayman),Premium Tax,0,0,0,,Cayman = no premium tax
+Property Captive (Cayman),Investment Income,40000,50000,60000,4.0% yield,Small invested base
+Property Captive (Cayman),Net Underwriting Result,62000,72660,83340,,
+CONSOLIDATED,Gross Written Premium,262905000,275423700,288619012,,Sum across all 3 captives
+CONSOLIDATED,Ceded Premium,-26770000,-27874100,-29030888,,
+CONSOLIDATED,Net Earned Premium,236135000,247549600,259588124,,
+CONSOLIDATED,Net Incurred Losses,-172079900,-180577006,-189545681,,
+CONSOLIDATED,LAE + TPA + Opex + Tax,-23071983,-24151989,-25289605,,Sum of admin / opex / tax across captives
+CONSOLIDATED,Investment Income,3540000,7050000,11540000,,Drives surplus accretion as MedMal reserves grow
+CONSOLIDATED,Net Underwriting Result,44523117,49870605,56292838,,Y1 NUR ~19% margin on net earned premium
+CONSOLIDATED,Cumulative NUR,44523117,94393722,150686560,,3-year underwriting profit retained
+CONSOLIDATED,Beginning Surplus,35750000,80273117,130143722,,Initial capital injection $35.75M
+CONSOLIDATED,Ending Surplus,80273117,130143722,186436560,,Balance sheet position grows ~5x over 3 years
