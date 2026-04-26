@@ -1,0 +1,30 @@
+[build]
+  publish = "."
+  command = "echo 'No build step - serving static files via docsify'"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/data/*.csv"
+  [headers.values]
+    Content-Type = "text/csv; charset=utf-8"
+    Content-Disposition = "attachment"
+
+# Pretty URL for the proforma
+[[redirects]]
+  from = "/proforma"
+  to = "/#/proforma"
+  status = 200
+
+[[redirects]]
+  from = "/assumptions"
+  to = "/#/assumptions"
+  status = 200

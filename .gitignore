@@ -1,0 +1,14 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Netlify
+.netlify/
+
+# Node (in case docsify-cli is installed locally)
+node_modules/

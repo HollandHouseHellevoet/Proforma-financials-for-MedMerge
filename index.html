@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedMerge Captive Insurance Proforma</title>
+  <meta name="description" content="MedMerge multi-line captive insurance proforma — Health, Casualty (incl. MedMal), Property captives across 20,050 lives and 87 owned facilities.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <style>
+    :root {
+      --theme-color: #0b5394;
+      --theme-color-secondary: #134f7a;
+    }
+    .markdown-section {
+      max-width: 1080px;
+    }
+    .markdown-section table {
+      display: table;
+      width: 100%;
+      font-size: 14px;
+    }
+    .markdown-section th {
+      background: #f5f7fa;
+    }
+    .markdown-section h1 {
+      color: var(--theme-color);
+      border-bottom: 3px solid var(--theme-color);
+      padding-bottom: 0.4em;
+    }
+    .markdown-section h2 {
+      color: var(--theme-color-secondary);
+      margin-top: 2em;
+    }
+    .markdown-section blockquote {
+      border-left: 4px solid var(--theme-color);
+      background: #f0f7ff;
+      padding: 0.8em 1em;
+    }
+    .sidebar-nav strong {
+      color: var(--theme-color);
+    }
+    .app-name-link img {
+      max-width: 100%;
+    }
+    code {
+      background: #f5f7fa;
+    }
+    .download-banner {
+      background: #fffbe6;
+      border: 1px solid #ffe58f;
+      border-radius: 6px;
+      padding: 12px 16px;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    .download-banner a {
+      color: var(--theme-color);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">Loading the MedMerge proforma…</div>
+  <script>
+    window.$docsify = {
+      name: 'MedMerge Captive Proforma',
+      repo: '',
+      loadSidebar: true,
+      subMaxLevel: 3,
+      auto2top: true,
+      maxLevel: 4,
+      homepage: 'README.md',
+      coverpage: '_coverpage.md',
+      onlyCover: false,
+      themeColor: '#0b5394',
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: 'Search the proforma…',
+        noData: 'No matches found.',
+        depth: 4
+      },
+      pagination: {
+        previousText: 'Previous',
+        nextText: 'Next',
+        crossChapter: true,
+        crossChapterText: true
+      },
+      copyCode: {
+        buttonText: 'Copy',
+        errorText: 'Error',
+        successText: 'Copied'
+      },
+      plugins: [
+        function(hook, vm) {
+          hook.afterEach(function(html) {
+            var path = vm.route.path || '';
+            if (path === '/' || path === '/README' || path.endsWith('README.md')) {
+              return html + '<div class="download-banner">📁 The underlying CSV data files (premiums, losses, reinsurance, capitalization, 3-year projection, scenarios) are available in the <a href="https://github.com/HollandHouseHellevoet/proforma-financials-for-medmerge/tree/main/data" target="_blank" rel="noopener">data directory of the source repo</a>. Edit any input there to re-run the model.</div>';
+            }
+            return html;
+          });
+        }
+      ]
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
+</body>
+</html>
