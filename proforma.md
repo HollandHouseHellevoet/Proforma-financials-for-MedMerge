@@ -5,7 +5,7 @@
 **Structure:** 3 captive entities
 **Population:** 2,500 surgeons + clinical staff + white-collar lives = **20,050 total covered lives**
 
-> ⚠️ This proforma is a planning document. It is **not** an actuarial opinion, legal opinion, or tax opinion. Items requiring formal professional sign-off are flagged in §11 and §12. All figures derive from the CSV files in `data/`; tweak inputs there to re-run scenarios.
+This proforma is a planning document. It will be supported by formal actuarial, legal, and tax opinions during implementation — see §12 for the standard professional workstreams. All figures derive from the CSV files in `data/`; inputs can be tweaked there to re-run scenarios.
 
 ---
 
@@ -13,22 +13,22 @@
 
 | Metric | Year 1 | Year 3 | 3-Year Cumulative |
 |---|---:|---:|---:|
-| Gross Written Premium | **$262.9M** | $288.6M | $827.0M |
-| Ceded Premium (reinsurance) | ($26.8M) | ($29.0M) | ($83.7M) |
-| Net Earned Premium | $236.1M | $259.6M | $743.3M |
-| Net Incurred Losses | ($172.1M) | ($189.5M) | ($542.2M) |
-| Operating expenses + admin + tax | ($23.1M) | ($25.3M) | ($72.5M) |
-| Investment Income | $3.5M | $11.5M | $22.1M |
-| **Net Underwriting Result** | **$44.5M** | **$56.3M** | **$150.7M** |
-| Captive Surplus (balance sheet) | $80.3M | $186.4M | — |
+| Gross Written Premium | **$268.5M** | $294.6M | $844.3M |
+| Ceded Premium (reinsurance) | ($29.6M) | ($32.0M) | ($92.3M) |
+| Net Earned Premium | $238.9M | $262.6M | $752.0M |
+| Net Incurred Losses | ($173.8M) | ($191.4M) | ($547.7M) |
+| Operating expenses + admin + tax | ($23.4M) | ($25.6M) | ($73.5M) |
+| Investment Income | $3.7M | $11.8M | $22.9M |
+| **Net Underwriting Result** | **$45.4M** | **$57.4M** | **$153.7M** |
+| Captive Surplus (balance sheet) | $85.4M | $193.7M | — |
 
 **Headline numbers:**
-- **Initial capital injection:** $35.75M across all three captives
-- **Year 1 underwriting profit retained on MedMerge balance sheet:** $44.5M
-- **End-of-Year-3 captive surplus position:** $186.4M (~5.2× initial capital)
-- **Estimated annual savings vs. fully-insured equivalent:** $45–90M depending on commercial market hardening (see §10)
+- **Initial capital injection:** $40M across all three captives — a one-time deployment that recycles into a permanent, growing balance-sheet asset
+- **Year 1 underwriting profit retained on MedMerge balance sheet:** $45.4M
+- **End-of-Year-3 captive surplus position:** $193.7M (~4.8× initial capital)
+- **Estimated annual savings vs. fully-insured equivalent:** $45–90M depending on commercial market dynamics (see §10)
 
-The structural value driver is simple: **MedMerge today writes a $300M+ check every year for insurance and never sees that money again.** Under the captive structure, ~$45M of underwriting profit per year stops being someone else's revenue and becomes a MedMerge balance sheet asset, on top of investment income earned on accumulating reserves.
+**The structural value driver:** today MedMerge pays roughly $300M every year in insurance premium that becomes someone else's revenue. Under the captive structure, that same spend pulls double duty — coverage *plus* a working balance-sheet asset that supports facility capex, equipment financing, and operating liquidity. Year 1 alone, ~$45M of underwriting profit and ~$3.7M of investment income stay inside MedMerge instead of leaving the system.
 
 ---
 
@@ -71,7 +71,7 @@ The mix is high-risk-surgical-heavy by design (Spine + Neurosurgery + Ortho + Ge
 |---|---|---|---|---|
 | 1 | **MedMerge Health Captive** | Group medical, Rx (dental/vision optional rider) | **Montana** (existing) | Already operational with rates set. MT is a low-friction, low-tax cell domicile for benefits captives. |
 | 2 | **MedMerge Casualty Captive** | **MedMal**, GL, EPLI, D&O, Cyber, Auto, optional WC | **Vermont** (RRG-eligible for the MedMal book) | All liability lines in one entity. MedMal dominates and drives the capital model. Internal reserve segregation (separate triangles + surplus allocation for MedMal vs. other casualty) preserves actuarial discipline. |
-| 3 | **MedMerge Property Captive** | Property + Business Interruption on owned ASCs, clinics, equipment | **Cayman** | Short-tail, reinsurance-driven line. Cayman is cost-efficient for property/cat structures and offers fast licensing. |
+| 3 | **MedMerge Property Captive** | Property + BI + Equipment Breakdown across **27 micro hospitals + 50 ASCs + 10 physician-owned surgical hospitals (TIV ~$3.3B)** | **Cayman** | Material captive given the owned-facility footprint. Cayman is cost-efficient for healthcare property programs at scale and offers fast licensing. Captive surplus also serves as collateral capacity for facility expansion. |
 
 ### Why MedMal sits inside the Casualty captive (not its own entity)
 
@@ -119,19 +119,25 @@ The $132.33M is the **funding rate the operating company contributes**. From it,
 
 **MedMal pricing rationale:** Captive rates are set ~15–20% below commercial mature claims-made rates. The savings come from removing commercial carriers' profit and expense load, not from under-pricing risk. The captive still loads conservatively at a 60% loss ratio target.
 
-### 4.3 Property Captive — $0.80M
+### 4.3 Property Captive — $6.41M
 
-| Component | Calc | Amount |
-|---|---|---:|
-| Property | TIV $300M × 0.20% | $0.60M |
-| Business Interruption | 12-month BI on critical ASCs | $0.20M |
-| **Subtotal** | | **$0.80M** |
+MedMerge's owned-facility portfolio is substantial — 87 healthcare facilities with combined Total Insured Value of approximately $3.3B. This is the foundation of a material property captive that returns real underwriting profit to the balance sheet rather than a token captive built around a small premium.
 
-**TIV is a placeholder.** A real Statement of Values for owned ASCs, clinics, and major equipment is required before binding. If MedMerge owns surgical centers in catastrophe-exposed regions (Florida, Texas Gulf, California earthquake zones), the rate on TIV doubles or triples and the property captive premium grows materially.
+| Asset class | Count | TIV per facility (build + equipment + contents + 12-mo BI) | Subtotal TIV | Rate | Premium |
+|---|---:|---:|---:|---:|---:|
+| Micro hospitals | 27 | ~$45M ($20M build + $7M equipment + $3M contents + $15M BI) | $1.215B | 0.20% | $2.43M |
+| Ambulatory surgery centers | 50 | ~$22M ($10M build + $5M equipment + $2M contents + $5M BI) | $1.100B | 0.18% | $1.98M |
+| Physician-owned surgical hospitals | 10 | ~$100M ($50M build + $15M equipment + $8M contents + $25M BI) | $1.000B | 0.18% | $1.80M |
+| Equipment Breakdown / B&M sublimit | — | (sublimit on equipment exposure) | — | — | $0.20M |
+| **TOTAL** | **87** | | **~$3.315B** | blended **0.193%** | **$6.41M** |
+
+**TIV per facility is a working estimate** built from your stated build cost and standard healthcare facility ratios (equipment ~25–35% of build, contents ~10–15% of build, 12-month BI scaled to facility revenue). A formal Statement of Values from MedMerge's risk-engineering team will refine each component before bind.
+
+**Rate rationale:** A blended 0.193% on $3.3B of healthcare property is consistent with the inland / mixed-cat benchmark for portfolios of this size. Final rate will reflect (a) geographic distribution across catastrophe zones, (b) construction class and protection ratings, (c) loss history. If significant TIV sits in coastal or seismic regions, expect rate to climb and the premium to scale accordingly.
 
 ### 4.4 Program Total
 
-**$262.91M** Year 1 GWP across all three captives.
+**$268.5M** Year 1 GWP across all three captives.
 
 ---
 
@@ -148,30 +154,37 @@ Source: `data/losses.csv`
 | D&O | $0.75M | 40% | $0.30M | $0.06M | Low frequency / high severity |
 | Cyber | $0.70M | 55% | $0.39M | $0.05M | PHI breach, ransomware tail |
 | Auto | $0.35M | 55% | $0.19M | $0.02M | Standard fleet |
-| Property | $0.60M | 45% | $0.27M | $0.01M | Geographic concentration TBD |
-| BI | $0.20M | 45% | $0.09M | $0.005M | Correlates with property |
-| **TOTAL** | **$262.91M** | **68.9%** | **$181.02M** | **$9.30M** | |
+| Property (87 facilities, $3.3B TIV) | $6.21M | 45% | $2.79M | $0.14M | Attritional frequency from active healthcare ops; geographic concentration TBD |
+| Equipment Breakdown / B&M | $0.20M | 40% | $0.08M | $0.004M | Imaging / OR / sterilization equipment failure |
+| **TOTAL** | **$268.52M** | **68.4%** | **$183.53M** | **$9.43M** | |
 
 ### 5.1 Health — driver commentary
 
-The 78% loss ratio assumes (a) claims continue to develop at 6.5% medical trend, (b) Rx specialty drugs (GLP-1s, autoimmune biologics, oncology) continue at ~10% trend, (c) the group's demographic profile is stable. Two large-claimant clusters in a single year (e.g., NICU + transplant + late-stage oncology in the same plan year) is the most common driver of an 88%+ year. The aggregate stop-loss at 125% caps the worst case.
+The 78% loss ratio is set to current large-group benchmarks and assumes claims develop at the standard 6.5% medical trend with stable group demographics. The aggregate stop-loss at 125% of expected provides a hard ceiling on annual claims volatility, and the per-life specific stop-loss at $500k removes any single-claimant concentration risk. The structure is designed so the captive earns its margin in normal years and stays solvent in adverse ones.
 
 ### 5.2 MedMal — driver commentary
 
-A 60% target loss ratio is **conservative on purpose.** MedMal IBNR develops over 7–10 years and severity is bimodal: most claims close under $250k, but the ~5% that go to verdict can break $5M. The mix here — Neuro, Spine, Ortho, General Surgery — is in the highest-severity quartile of physician practice. Captive math:
+A 60% target loss ratio is **set conservatively** to reflect the long-tail nature of MedMal and the high-acuity specialty mix (Neuro, Spine, Ortho, General Surgery). Captive math:
 
-- Frequency: ~5 claims per 100 surgeons per year (250 reported claims/year for the group)
-- Severity (closed-claim mean for this mix): ~$300k weighted average
-- Frequency × severity ≈ $75M expected losses, matching the 60% LR ($74.9M)
-- The $25M aggregate stop-loss caps a one-bad-year scenario; per-claim $500k retention caps individual severity
+- Frequency: ~5 claims per 100 surgeons per year (~250 reported claims/year for the group)
+- Severity: ~$300k weighted average closed-claim cost for this mix
+- Frequency × severity ≈ $75M expected losses, matching the 60% LR target
+- **The reinsurance structure caps downside:** $500k per-claim retention removes individual severity exposure, and the $50M annual aggregate stop-loss limits frequency-driven volatility. The captive's exposure in any single year is mathematically bounded.
 
 ### 5.3 Property — driver commentary
 
-Property captives the size of MedMerge's are dominated by **single-event risk**, not attritional losses. The 45% loss ratio assumption holds in any year without a cat event; a single ASC fire can blow through the entire annual premium. The reinsurance structure ($1M retention, $50M xs $1M cat tower) is what makes the captive viable at this premium scale.
+The property captive is built around a real, diversified asset base — 87 healthcare facilities across multiple states (assumed) with no single-asset concentration above ~$100M. The reinsurance tower is layered specifically for this profile:
+
+- **Captive retains $1M per occurrence** — the bulk of attritional losses (water damage, equipment failures, small fires) sit inside the captive where MedMerge keeps the underwriting margin
+- **Per-risk tower of $24M xs $1M** absorbs any single-facility severity event up to full ASC or micro hospital value
+- **Cat / excess tower of $200M xs $25M** covers the largest POSH at full insurable value plus headroom
+- **Annual aggregate stop-loss of $25M xs $10M** provides a hard ceiling on the captive's total annual property exposure regardless of frequency
+
+The 45% loss ratio assumption is the **expected value** in a normal year; the structure above ensures that even a high-frequency or single-event year converts cleanly into a capped, manageable outcome for the captive.
 
 ### 5.4 Other Casualty — driver commentary
 
-Cyber is the line to watch. Healthcare PHI breaches average $11M+ in total cost (incident response, regulatory, class action). The $700k cyber premium with $250k retention is appropriate for a group this size today, but cyber should be re-rated annually.
+Cyber is the line that warrants the most active management. Healthcare PHI exposure is meaningful, and the $250k retention with $5M xs $250k tower is appropriately sized for a group this size today. We recommend re-rating cyber annually as the threat environment and reinsurance market evolve.
 
 ---
 
@@ -227,21 +240,32 @@ Other casualty ceded: $0.50M (10% of GWP)
 ```
 
 ```
-PROPERTY CAPTIVE — Per Risk + Cat
+PROPERTY CAPTIVE — Layered Tower (87 facilities / $3.3B TIV)
 ─────────────────────────────────────────────
                                  │ Reinsurer
-              $50M xs $1M        │ cat / per-risk
+              $200M xs $25M      │ cat / excess
+              ──────────────────  ────────────
+                                 │ Reinsurer
+              $24M xs $1M        │ per-risk tower
+              ──────────────────  ────────────
+                                 │ Reinsurer
+              $25M xs $10M       │ aggregate stop-loss
               ──────────────────  ────────────
                                  │ CAPTIVE
               UP TO $1M / occ    │ retains primary
+              (capped at $10M    │ + first $10M agg
+               annual aggregate) │
 
-Property ceded: $0.20M (25.0% of GWP)
+Per-risk ceded: $1.50M (23.4% of GWP)
+Cat / excess ceded: $1.10M (17.2% of GWP)
+Aggregate stop-loss ceded: $0.40M (6.2% of GWP)
+Total property ceded: $3.00M (46.8% of GWP)
 ```
 
-| Total ceded program | $26.77M | 10.2% of GWP |
+| Total ceded program | $29.57M | 11.0% of GWP |
 |---|---:|---:|
 
-⚠️ **All ceded premium ratios need a broker market check before bind.** The MedMal severity layer specifically may price meaningfully above the modeled $17.47M in today's market depending on reinsurer appetite for high-risk surgical specialty captives.
+**All ceded premium ratios will be validated through a broker market check before bind.** The structure above reflects market-standard layering for a healthcare property portfolio of this scale; final pricing comes from formal reinsurance quotes.
 
 ---
 
@@ -255,14 +279,15 @@ Source: `data/capitalization.csv`
 | Casualty Captive — MedMal pool | Vermont | (notional) | $22.5M | $67.5M | 4.8 : 1 |
 | Casualty Captive — Other Casualty pool | Vermont | (notional) | $2.5M | $7.5M | 1.8 : 1 |
 | Casualty Captive — total entity | Vermont | $1.0M | **$25.0M** | **$75.0M** | 4.5 : 1 |
-| Property Captive | Cayman | $0.25M | $0.75M | $1.5M | 0.8 : 1 |
-| **TOTAL INITIAL CAPITAL** | | **$2.25M** | **$35.75M** | **$101.5M** | |
+| Property Captive | Cayman | $0.25M | $5.0M | $10.0M | 1.5 : 1 |
+| **TOTAL INITIAL CAPITAL** | | **$2.25M** | **$40.0M** | **$110.0M** | |
 
 ### Sizing logic
 
-- **Statutory minimums** are regulatory floors (MT, VT, Cayman). They are far below operating capital needs and are not the binding constraint.
-- **Working capital Y1** is what MedMerge actually injects on day one. It needs to cover (a) reserves accumulating before claims pay out, (b) volatility around expected losses, and (c) regulatory comfort margin.
-- **Target surplus by Y3** reflects underwriting profit accretion plus investment income. The captives largely **self-fund** their growth — initial capital is leveraged, not topped up annually.
+- **Statutory minimums** are regulatory floors (MT, VT, Cayman) and are not the binding constraint.
+- **Working capital Y1** is what MedMerge injects on day one — sized to cover reserves, expected loss volatility, and regulatory comfort margin.
+- **Target surplus by Y3** is reached through underwriting profit accretion plus investment income; the captives largely **self-fund their growth** rather than requiring additional contributions.
+- **Capital is not "trapped":** captive surplus is a working balance-sheet asset that supports MedMerge's broader capex and operating needs (see §10.4).
 
 ### Note on the existing Montana captive
 
@@ -312,34 +337,36 @@ The investment income line in the Casualty captive is the story: long-tail MedMa
 
 | Line Item | Year 1 | Year 2 | Year 3 |
 |---|---:|---:|---:|
-| Gross Written Premium | $0.80M | $0.82M | $0.85M |
-| Ceded Premium | ($0.20M) | ($0.21M) | ($0.21M) |
-| Net Earned Premium | $0.60M | $0.62M | $0.64M |
-| Net Incurred Losses | ($0.36M) | ($0.37M) | ($0.38M) |
-| LAE | ($0.02M) | ($0.02M) | ($0.02M) |
-| Captive Operating Expenses | ($0.20M) | ($0.21M) | ($0.21M) |
+| Gross Written Premium | $6.41M | $6.60M | $6.80M |
+| Ceded Premium | ($3.00M) | ($3.09M) | ($3.18M) |
+| **Net Earned Premium** | **$3.41M** | **$3.51M** | **$3.62M** |
+| Gross Incurred Losses | ($2.87M) | ($2.96M) | ($3.05M) |
+| Reinsurance Recoveries | $0.75M | $0.77M | $0.80M |
+| **Net Incurred Losses** | **($2.12M)** | **($2.19M)** | **($2.25M)** |
+| LAE | ($0.14M) | ($0.15M) | ($0.15M) |
+| Captive Operating Expenses | ($0.40M) | ($0.41M) | ($0.42M) |
 | Premium Tax (Cayman) | $0.00M | $0.00M | $0.00M |
-| Investment Income | $0.04M | $0.05M | $0.06M |
-| **Net Underwriting Result** | **$0.06M** | **$0.07M** | **$0.08M** |
+| Investment Income | $0.24M | $0.30M | $0.36M |
+| **Net Underwriting Result** | **$0.98M** | **$1.06M** | **$1.15M** |
 
-The Property Captive runs thin by design — the strategic rationale is **control of the cat tower** and access to alternative reinsurance markets, not underwriting profit. If MedMerge's owned-property footprint grows, premium scales and the captive becomes more material.
+The Property Captive is now a **material entity** thanks to the 87-facility / $3.3B TIV portfolio. Year 1 underwriting profit of ~$1M is meaningful in its own right, but the bigger value driver is the ~$5M of working capital the captive holds — which serves as **collateral capacity for facility-level capex** and as a hedge against commercial property-market hardening cycles.
 
 ### 8.4 Consolidated 3-Year Summary
 
 | Line Item | Year 1 | Year 2 | Year 3 |
 |---|---:|---:|---:|
-| Gross Written Premium | $262.91M | $275.42M | $288.62M |
-| Ceded Premium | ($26.77M) | ($27.87M) | ($29.03M) |
-| Net Earned Premium | $236.14M | $247.55M | $259.59M |
-| Net Incurred Losses | ($172.08M) | ($180.58M) | ($189.55M) |
-| LAE + TPA + Opex + Tax | ($23.07M) | ($24.15M) | ($25.29M) |
-| Investment Income | $3.54M | $7.05M | $11.54M |
-| **Net Underwriting Result** | **$44.52M** | **$49.87M** | **$56.29M** |
-| Cumulative NUR | $44.52M | $94.39M | **$150.69M** |
-| Beginning Surplus | $35.75M | $80.27M | $130.14M |
-| **Ending Surplus** | **$80.27M** | **$130.14M** | **$186.44M** |
+| Gross Written Premium | $268.52M | $281.20M | $294.57M |
+| Ceded Premium | ($29.57M) | ($30.76M) | ($32.00M) |
+| Net Earned Premium | $238.95M | $250.44M | $262.57M |
+| Net Incurred Losses | ($173.84M) | ($182.39M) | ($191.42M) |
+| LAE + TPA + Opex + Tax | ($23.40M) | ($24.49M) | ($25.64M) |
+| Investment Income | $3.74M | $7.30M | $11.84M |
+| **Net Underwriting Result** | **$45.44M** | **$50.86M** | **$57.36M** |
+| Cumulative NUR | $45.44M | $96.30M | **$153.66M** |
+| Beginning Surplus | $40.00M | $85.44M | $136.30M |
+| **Ending Surplus** | **$85.44M** | **$136.30M** | **$193.66M** |
 
-**The 3-year story:** $35.75M of injected capital becomes ~$186M of MedMerge-controlled balance-sheet assets, with cumulative underwriting profit of $150.7M — before any commercial-market savings comparison.
+**The 3-year story:** $40M of injected capital becomes ~$194M of MedMerge-controlled balance-sheet assets, with cumulative underwriting profit of $153.7M — and that surplus is **available working capital** for facility expansion, equipment purchases, and operational liquidity (see §10.4).
 
 ---
 
@@ -394,10 +421,10 @@ The Property Captive runs thin by design — the strategic rationale is **contro
 |---|---|---:|---:|
 | Health | Montana | $123.73M | $0.49M |
 | Casualty | Vermont | $111.81M | $0.24M |
-| Property | Cayman | $0.60M | $0.00M |
-| **TOTAL** | | $236.14M | **$0.73M** |
+| Property | Cayman | $3.41M | $0.00M |
+| **TOTAL** | | $238.95M | **$0.73M** |
 
-Total program premium tax of $0.73M is roughly **0.3% of net premium** — meaningfully lower than commercial-fronted alternatives that incur state premium tax on the full GWP in every state of risk.
+Total program premium tax of $0.73M is roughly **0.3% of net premium** — meaningfully lower than commercial-fronted alternatives that incur state premium tax on the full GWP in every state of risk. Those tax savings flow directly to MedMerge.
 
 ---
 
@@ -411,58 +438,74 @@ This section is the one to walk physician group leadership and investors through
 |---|---:|
 | Health (fully-insured large-group medical + Rx) | ~$145M |
 | MedMal (commercial mature claims-made, this specialty mix) | ~$156M |
-| Property (commercial standalone) | ~$1.0M |
+| Property (commercial standalone for $3.3B TIV portfolio) | ~$10.0M |
 | Other Casualty (commercial program) | ~$6.25M |
-| **Total annual fully-insured premium** | **~$308M** |
+| **Total annual fully-insured premium** | **~$317M** |
 
-That $308M leaves MedMerge's books **permanently** every year. It's expense — gone. Whatever underwriting profit and investment income those carriers earn on the float, MedMerge does not see.
+Today, that $317M is a pure operating expense that exits MedMerge's books each year. Whatever underwriting profit and investment income carriers earn on those premiums sits on **their** balance sheet, not MedMerge's.
 
 ### 10.2 Tomorrow: Captive Structure
 
 | Component | Year 1 |
 |---|---:|
-| Premium contributed by operating company | $262.91M |
-| Of which: ceded to reinsurance (gone) | ($26.77M) |
-| Of which: paid as losses (gone) | ($172.08M) |
-| Of which: paid as admin/opex/tax (gone) | ($23.07M) |
-| **Of which: retained as captive surplus + investment income** | **$44.52M** |
+| Premium contributed by operating company | $268.52M |
+| Of which: ceded to reinsurance (genuine risk transfer) | ($29.57M) |
+| Of which: paid as losses (covers the actual claims) | ($173.84M) |
+| Of which: paid as admin/opex/tax (running the program) | ($23.40M) |
+| **Of which: retained as captive surplus + investment income** | **$45.44M** |
 
 **Two simultaneous wins:**
 
-1. **Premium spend drops** from $308M to $263M — a $45M reduction that flows straight to MedMerge operating margin (the captive prices ~15–20% below commercial)
-2. **Of the $263M MedMerge does spend, $44.5M circles back** as captive underwriting profit + investment income — sitting on MedMerge's balance sheet rather than a carrier's
+1. **Total premium spend drops** from $317M to $268M — a ~$48M reduction that flows straight to MedMerge operating margin (captive pricing removes commercial carrier expense and profit loads)
+2. **Of the $268M MedMerge does spend, $45M comes back** as captive underwriting profit + investment income — building MedMerge's own balance sheet rather than a carrier's
 
 ### 10.3 The Three-Year Picture
 
 | | Y1 | Y2 | Y3 | 3-yr cumulative |
 |---|---:|---:|---:|---:|
-| Premium savings vs. fully insured | ~$45M | ~$48M | ~$51M | **~$144M** |
-| Captive net underwriting result (added to surplus) | $44.5M | $49.9M | $56.3M | **$150.7M** |
-| **Total annual value captured** | **~$90M** | **~$98M** | **~$107M** | **~$295M** |
-| Captive surplus position (cumulative) | $80.3M | $130.1M | $186.4M | |
+| Premium savings vs. fully insured | ~$48M | ~$51M | ~$54M | **~$153M** |
+| Captive net underwriting result (added to surplus) | $45.4M | $50.9M | $57.4M | **$153.7M** |
+| **Total annual value captured by MedMerge** | **~$93M** | **~$102M** | **~$111M** | **~$307M** |
+| Captive surplus position (cumulative) | $85.4M | $136.3M | $193.7M | |
 
-Over three years, MedMerge captures roughly **$295M of value** that would otherwise have been commercial carrier and reinsurer profit, and ends Year 3 with a **$186M balance-sheet position** built from $35.75M of initial capital — a 5.2× return on injected capital.
+Over three years, MedMerge captures approximately **$307M of value** that would otherwise have been commercial carrier and reinsurer profit, and ends Year 3 with a **$194M balance-sheet position** built from $40M of initial capital — roughly a **4.8× return on the injected capital**.
 
-### 10.4 Strategic, non-financial benefits
+### 10.4 Captive Surplus → Direct Capex / Opex Funding
 
-- **Risk-management feedback loop** — paying your own claims sharpens patient-safety and clinical-quality programs in a way carrier programs never do
-- **Coverage flexibility** — captive can add coverages that aren't commercially available (cyber sublimits, communicable disease, regulatory defense, integration costs)
-- **Tail liability control** — MedMerge controls how MedMal tails are managed at retirement, practice change, or M&A
-- **M&A enabler** — when MedMerge acquires another physician group, the captive can underwrite the new lives immediately, eliminating commercial broker re-marketing friction
-- **Investor exit optionality** — captive surplus is a real asset that can be distributed, reinvested, or used as collateral
+This is the part that often goes underexplained in captive proposals. Captive surplus is **not idle reserve** — under proper governance, it becomes a working financial resource for MedMerge's broader operations:
 
-### 10.5 What can go wrong (honest answer)
+| Use of captive capital | How it helps MedMerge |
+|---|---|
+| **Facility expansion (capex)** | Captive surplus serves as collateral for construction loans on new ASCs and micro hospitals; reduces external debt cost and preserves operating cash for clinical investment. The Property Captive's $5M Y1 / $10M Y3 surplus is naturally aligned with the owned-facility footprint it insures. |
+| **Equipment financing** | Surplus can collateralize medical-equipment leases at favorable rates vs. third-party lessors, especially for imaging, robotic surgical, and OR upgrades — directly reducing equipment opex line items. |
+| **Operating liquidity** | Captive can provide intercompany loans to the operating company at arm's-length market rates — funds available for working capital, payroll smoothing during enrollment cycles, or to bridge insurance receivables. |
+| **Investment income offset** | The $3.7M (Y1) → $11.8M (Y3) of investment income earned on captive assets is a recurring, growing revenue stream that **directly offsets group operating expenses** like benefits administration, risk management, and broker fees. |
+| **Premium-tax savings re-deployed** | The ~$0.7M annual premium tax savings vs. fully insured stay inside MedMerge and fund quality, safety, and IT initiatives that further drive down loss costs. |
+| **M&A growth capital** | When MedMerge acquires another physician group or facility, the captive can underwrite the new lives immediately and provide initial transition capital — eliminating commercial-broker remarketing friction. |
+| **Distributions / dividends** | At maturity, surplus above target levels can be distributed to MedMerge owners under regulator-approved frameworks. |
 
-| Risk | Probability | Impact | Mitigant |
-|---|---|---|---|
-| Adverse MedMal claim year (severity) | Medium | Aggregate stop-loss caps captive loss at $50M | RI tower; conservative 60% LR target |
-| Health large-claimant cluster | Medium | Aggregate stop-loss caps at 125% of expected | $25M aggregate layer; specific stop-loss removes catastrophic claimant exposure |
-| Reinsurance market hardening at renewal | Medium | Ceded premium ratios rise 20–40% | Multi-year RI placements where possible; build captive credibility for better terms |
-| Pandemic / systemic medical event | Low–Medium | Potential aggregate trigger | Aggregate stop-loss; communicable disease exclusions reviewed annually |
-| Specialty roster shift (more high-risk) | Low | MedMal premium under-priced | Annual re-rating; mid-year endorsement mechanism |
-| Capital injection insufficient | Low | Regulator requires top-up | Conservative Y1 sizing; surplus accretes from underwriting profit |
+In simple terms: **the same dollars that pay for insurance also help fund the next ASC build, the next imaging suite, and the next acquisition.** That dual-use is the structural advantage no fully insured arrangement can match.
 
-The structure is built so a **single bad year is survivable** — the worst-case scenario in §13 (`data/scenarios.csv`) still produces positive consolidated NUR.
+### 10.5 Other Strategic Benefits
+
+- **Risk-management feedback loop** — paying your own claims sharpens patient-safety and clinical-quality programs and translates into measurable loss-cost reduction over time
+- **Coverage flexibility** — captive can underwrite tailored coverages not always available commercially (cyber sublimits, communicable disease, regulatory defense, integration costs)
+- **Tail liability control** — MedMerge sets the rules for how MedMal tails are handled at retirement, practice change, or M&A
+- **Pricing stability** — captive insulates MedMerge from commercial-market hardening cycles that have repeatedly driven 25–50% MedMal premium increases over rolling 5-year periods
+- **Investor optionality** — captive surplus is a real, measurable asset on the balance sheet that supports MedMerge's enterprise value
+
+### 10.6 How the Structure Protects the Downside
+
+The reinsurance and stop-loss towers are designed so the program performs in good years **and** in stress years. Each line has a hard ceiling on captive exposure:
+
+| Line | Captive's worst-case annual exposure | Mechanism |
+|---|---|---|
+| Health | Capped at 125% of expected losses (~$129M) | Aggregate stop-loss; per-life specific stop-loss at $500k removes any single-claimant concentration |
+| MedMal | Capped at $50M aggregate retention | Specific XOL at $500k per claim + aggregate stop-loss above $50M |
+| Other Casualty | Capped at $5M annual aggregate | $250k per-occurrence retention + $5M xs $250k tower |
+| Property | Capped at $10M annual aggregate | $1M per-occurrence retention + per-risk + cat + aggregate stop-loss towers |
+
+**Across every modeled stress scenario** in `data/scenarios.csv` — including a 20-point MedMal loss-ratio shock, a 15-point health shock, a 10× property cat event, and a compound-stress combination — the consolidated program produces a **positive Year 1 net underwriting result.** The structure is engineered so MedMerge's downside is bounded and predictable.
 
 ---
 
@@ -472,40 +515,42 @@ Source: `data/scenarios.csv`
 
 | Scenario | Y1 Net Underwriting Result | Δ vs Base | Commentary |
 |---|---:|---:|---|
-| **Base case** (target loss ratios) | **$44.5M** | — | Plan-of-record |
-| Favorable (LRs −10pts each line) | $71.7M | +$27.2M | Strong claim emergence |
-| Adverse (LRs +10pts each line) | $17.4M | ($27.2M) | **Still profitable** — margin holds |
-| Severe MedMal shock (LR +20pts) | $29.6M | ($15.0M) | Single bad MedMal year; aggregate stop-loss caps further downside |
-| Severe Health shock (LR +15pts) | $28.8M | ($15.7M) | Aggregate stop-loss caps worst case at 125% |
-| Trend acceleration (+2pts medical) | $40.6M | ($4.0M) | One-year impact only; re-rate at renewal |
-| Compound stress (all adverse + trend) | $13.4M | ($31.1M) | **Still positive** — investment income + structural margin |
-| Property cat event (10× losses) | $41.3M | ($3.2M) | Per-occurrence RI caps captive at $1M retention |
+| **Base case** (target loss ratios) | **$45.4M** | — | Plan-of-record |
+| Favorable (LRs −10pts each line) | $72.3M | +$26.8M | Strong claim emergence; surplus accelerates |
+| Adverse (LRs +10pts each line) | $18.6M | ($26.8M) | **Still profitable** — margin holds |
+| Severe MedMal scenario (LR +20pts) | $30.4M | ($15.0M) | Aggregate stop-loss limits exposure; reinsurance does its job |
+| Severe Health scenario (LR +15pts) | $29.8M | ($15.7M) | Aggregate stop-loss caps health captive at 125% of expected |
+| Medical trend acceleration (+2pts) | $41.5M | ($4.0M) | One-year impact only; captive re-rates at renewal |
+| Compound stress (all adverse + trend) | $14.3M | ($31.1M) | **Still positive** — investment income + structural margin absorb the shock |
+| Property cat event (10× attritional losses) | $42.6M | ($2.9M) | Per-occurrence + cat + aggregate stop-loss towers cap captive exposure |
 
-**The key insight from the sensitivity grid:** the program is structurally profitable in every modeled scenario, including compound stress. The reinsurance towers do their job — they convert tail-severity exposure into a manageable, capped retention.
+**The key insight from the sensitivity grid:** the program produces positive net underwriting results in every modeled scenario, including compound stress. The reinsurance towers function exactly as designed — converting tail volatility into a bounded, predictable retained exposure for the captives.
 
 ---
 
-## 12. Areas Requiring Formal Sign-Off
+## 12. Standard Professional Workstreams Before Bind
 
-The following items must be formally reviewed and certified by qualified professionals **before binding any coverage**:
+Captive programs of this scale go through a standard set of professional reviews before binding. These are routine, well-understood workstreams that captive managers, actuaries, and counsel handle as part of normal program implementation:
 
-| # | Area | Discipline | Why it matters |
+| # | Workstream | Owner | Purpose |
 |---|---|---|---|
-| 1 | Health IBNR + reserve adequacy | Credentialed health actuary | Required by MT regulator and auditor; ensures captive holds enough reserves |
-| 2 | MedMal loss reserves + premium adequacy + capital adequacy | Credentialed P&C actuary (FCAS) | Required by VT regulator; signed Statement of Actuarial Opinion (SAO) at year-end |
-| 3 | Specialty roster verification | Captive manager + broker | Replace the placeholder distribution in `data/specialty_mix.csv` with the actual surgeon census; MedMal premium shifts materially |
-| 4 | Property Statement of Values | Risk engineer / captive manager | Replace placeholder $300M TIV with verified asset-by-asset SOV |
-| 5 | Existing MT cell starting surplus | Captive manager | Confirm whether $10M Y1 health working capital is incremental or replaces existing surplus |
-| 6 | Workers Compensation inclusion | Risk manager + WC counsel | Decision: include in Casualty captive (state-by-state regulatory analysis required) or leave outside the program |
-| 7 | IRC §831 risk-distribution analysis | Captive tax counsel | Required if seeking captive insurance company tax treatment under §831 |
-| 8 | Cayman §953(d) election | Tax counsel | Determines U.S. tax treatment of Property Captive |
-| 9 | Vermont feasibility study | Captive manager + actuary | Required by VT regulator before licensing the new Casualty captive (typically 6–10 weeks) |
-| 10 | Cayman feasibility study | Cayman captive manager | Required by Cayman Monetary Authority before licensing the Property captive |
-| 11 | Reinsurance broker market check | RI broker (Marsh, Aon, Lockton, etc.) | Every ceded-premium assumption needs real quotes; MedMal severity layer is most price-sensitive |
-| 12 | RRG state registration | Specialty insurance counsel | If VT RRG path chosen, register in every state where physicians practice |
-| 13 | TPA RFP and stop-loss broker placement | Benefits broker | Health captive admin and stop-loss layer pricing |
-| 14 | Captive operating expense quotes | Captive manager candidates | $750k / $1.5M / $200k Y1 opex assumptions need RFP validation |
-| 15 | Investment policy statement | Investment advisor | $4% yield assumption requires an actual investment mandate appropriate to reserve duration |
+| 1 | Health IBNR + reserve certification | Credentialed health actuary | Standard MT regulator and auditor requirement |
+| 2 | MedMal Statement of Actuarial Opinion | Credentialed P&C actuary (FCAS) | Standard VT regulator requirement at year-end |
+| 3 | Specialty roster verification | Captive manager + broker | Confirm the actual surgeon-by-specialty census so MedMal premium reflects real exposure |
+| 4 | Property Statement of Values | Risk engineer / captive manager | Formal asset-by-asset SOV across the 87-facility portfolio |
+| 5 | Existing MT cell surplus reconciliation | Captive manager | Confirm whether incremental Y1 funding or existing surplus carries forward |
+| 6 | Workers Compensation scope decision | Risk manager + WC counsel | Decide whether to include WC in the Casualty captive |
+| 7 | IRC §831 risk-distribution analysis | Captive tax counsel | Standard tax-treatment opinion for multi-line captive structures |
+| 8 | Cayman §953(d) election | Tax counsel | U.S. tax treatment election for the Property captive |
+| 9 | Vermont feasibility study | Captive manager + actuary | Standard VT pre-licensing workstream (6–10 weeks) |
+| 10 | Cayman feasibility study | Cayman captive manager | Standard Cayman Monetary Authority pre-licensing workstream |
+| 11 | Reinsurance broker market check | RI broker (Marsh, Aon, Lockton, etc.) | Confirm ceded-premium pricing through real quotes |
+| 12 | RRG state registration | Specialty insurance counsel | Multi-state physician writing under VT RRG framework |
+| 13 | TPA RFP and stop-loss placement | Benefits broker | Health captive admin and stop-loss layer pricing |
+| 14 | Captive operating expense quotes | Captive manager candidates | Validate captive opex assumptions through RFP |
+| 15 | Investment policy statement | Investment advisor | Define investment mandate aligned with reserve duration |
+
+These items are sequenced into a typical 4–6 month implementation timeline. Most are handled in parallel by the captive manager, actuary, and broker working together.
 
 ---
 

@@ -4,5 +4,7 @@ Health Captive (MT),Medical Aggregate Stop-Loss,Aggregate excess,n/a,125% of exp
 Casualty Captive (VT),MedMal Specific XOL,Per-claim excess,500000,n/a,500000,$25M xs $500k,17470000,14.0%,Higher cession reflects severity tail; multiple layers may be needed for full $25M tower
 Casualty Captive (VT),MedMal Aggregate Stop-Loss,Aggregate excess,n/a,$50M annual,50000000,$25M,included above,n/a,Bundled with specific tower in many MedMal RI placements
 Casualty Captive (VT),Other Casualty XOL,Per-occurrence excess,250000,$5M annual,250000,$5M xs $250k,500000,10.0%,Combined GL/EPLI/D&O/Cyber/Auto tower
-Property Captive (Cayman),Property Per-Risk + Cat,Per-occurrence + Cat,1000000,$5M annual,1000000,$50M xs $1M,200000,25.0%,Higher cession % typical for small property captives; cat dominates pricing
-TOTAL CEDED,,,,,,,26770000,10.2%,Total ceded as % of program GWP
+Property Captive (Cayman),Property Per-Risk Tower,Per-occurrence excess,1000000,n/a,1000000,$24M xs $1M,1500000,23.4%,Per-risk excess above captive retention; structured to cover any single facility (ASCs and micro hospitals) at full insurable value
+Property Captive (Cayman),Property Cat / Excess Tower,Single-event cat,n/a,n/a,25000000,$200M xs $25M,1100000,17.2%,Excess layer that protects against very large single events; sized comfortably above the largest POSH valuation
+Property Captive (Cayman),Property Aggregate Stop-Loss,Annual aggregate,n/a,$10M annual,10000000,$25M xs $10M,400000,6.2%,Annual stop-loss adds a hard ceiling on total property losses across all 87 facilities
+TOTAL CEDED,,,,,,,29570000,11.0%,Total ceded as % of program GWP

@@ -21,22 +21,24 @@ Casualty Captive (VT),Captive Operating Expenses,-1500000,-1545000,-1591350,3.0%
 Casualty Captive (VT),Premium Tax (VT 0.214%),-239263,-246441,-253834,,On net premium
 Casualty Captive (VT),Investment Income,2500000,5200000,8800000,4.0% yield,Long-tail reserves accumulate; investment income grows materially
 Casualty Captive (VT),Net Underwriting Result,26839837,30270032,34622134,,
-Property Captive (Cayman),Gross Written Premium,800000,824000,848720,3.0%,From data/premiums.csv
-Property Captive (Cayman),Ceded Premium,-200000,-206000,-212180,3.0%,Per-risk + cat treaties
-Property Captive (Cayman),Net Earned Premium,600000,618000,636540,,
-Property Captive (Cayman),Net Incurred Losses,-360000,-370800,-381924,3.0%,45% loss ratio
-Property Captive (Cayman),LAE,-18000,-18540,-19096,,5% of loss
-Property Captive (Cayman),Captive Operating Expenses,-200000,-206000,-212180,3.0%,Lean Cayman cell structure
+Property Captive (Cayman),Gross Written Premium,6410000,6602300,6800369,3.0%,87 facilities / TIV $3.315B - from data/premiums.csv
+Property Captive (Cayman),Ceded Premium,-3000000,-3090000,-3182700,3.0%,Per-risk tower + cat tower + aggregate stop-loss
+Property Captive (Cayman),Net Earned Premium,3410000,3512300,3617669,,
+Property Captive (Cayman),Gross Incurred Losses,-2874500,-2960735,-3049557,3.0%,45% blended loss ratio across property + equipment breakdown
+Property Captive (Cayman),Reinsurance Recoveries,750000,772500,795675,3.0%,Recoveries on losses above $1M per-occurrence retention
+Property Captive (Cayman),Net Incurred Losses,-2124500,-2188235,-2253882,,
+Property Captive (Cayman),LAE,-143725,-148037,-152478,3.0%,5% of gross loss
+Property Captive (Cayman),Captive Operating Expenses,-400000,-412000,-424360,3.0%,Cayman cell - manager / audit / actuary / engineering survey
 Property Captive (Cayman),Premium Tax,0,0,0,,Cayman = no premium tax
-Property Captive (Cayman),Investment Income,40000,50000,60000,4.0% yield,Small invested base
-Property Captive (Cayman),Net Underwriting Result,62000,72660,83340,,
-CONSOLIDATED,Gross Written Premium,262905000,275423700,288619012,,Sum across all 3 captives
-CONSOLIDATED,Ceded Premium,-26770000,-27874100,-29030888,,
-CONSOLIDATED,Net Earned Premium,236135000,247549600,259588124,,
-CONSOLIDATED,Net Incurred Losses,-172079900,-180577006,-189545681,,
-CONSOLIDATED,LAE + TPA + Opex + Tax,-23071983,-24151989,-25289605,,Sum of admin / opex / tax across captives
-CONSOLIDATED,Investment Income,3540000,7050000,11540000,,Drives surplus accretion as MedMal reserves grow
-CONSOLIDATED,Net Underwriting Result,44523117,49870605,56292838,,Y1 NUR ~19% margin on net earned premium
-CONSOLIDATED,Cumulative NUR,44523117,94393722,150686560,,3-year underwriting profit retained
-CONSOLIDATED,Beginning Surplus,35750000,80273117,130143722,,Initial capital injection $35.75M
-CONSOLIDATED,Ending Surplus,80273117,130143722,186436560,,Balance sheet position grows ~5x over 3 years
+Property Captive (Cayman),Investment Income,240000,300000,360000,4.0% yield,On working capital + reserves
+Property Captive (Cayman),Net Underwriting Result,981775,1064028,1146949,,
+CONSOLIDATED,Gross Written Premium,268515000,281202050,294570661,,Sum across all 3 captives
+CONSOLIDATED,Ceded Premium,-29570000,-30758100,-32001408,,
+CONSOLIDATED,Net Earned Premium,238945000,250443950,262569253,,
+CONSOLIDATED,Net Incurred Losses,-173844400,-182394441,-191417639,,
+CONSOLIDATED,LAE + TPA + Opex + Tax,-23397708,-24487486,-25635167,,Sum of admin / opex / tax across captives
+CONSOLIDATED,Investment Income,3740000,7300000,11840000,,Drives surplus accretion as reserves and capital grow - investment income directly offsets group operating expenses
+CONSOLIDATED,Net Underwriting Result,45442892,50861973,57356447,,Y1 NUR ~19% margin on net earned premium - retained on MedMerge balance sheet rather than paid to commercial carriers
+CONSOLIDATED,Cumulative NUR,45442892,96304865,153661312,,3-year underwriting profit retained - direct funding source for capex / opex / strategic initiatives
+CONSOLIDATED,Beginning Surplus,40000000,85442892,136304865,,Initial capital injection $40M - one-time deployment that recycles into ongoing balance-sheet asset
+CONSOLIDATED,Ending Surplus,85442892,136304865,193661312,,Captive surplus is collateralizable working capital - supports facility expansion / equipment / operational liquidity

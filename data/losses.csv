@@ -6,6 +6,6 @@ Casualty Captive (VT),Employment Practices Liability,1200000,50.0%,600000,15.0%,
 Casualty Captive (VT),Directors & Officers,750000,40.0%,300000,20.0%,60000,Low frequency / high severity for healthcare D&O
 Casualty Captive (VT),Cyber Liability,700000,55.0%,385000,12.0%,46200,PHI breach severity; ransomware tail; rising trend
 Casualty Captive (VT),Auto Liability,350000,55.0%,192500,8.0%,15400,Standard commercial auto exposure
-Property Captive (Cayman),Property,600000,45.0%,270000,5.0%,13500,Equipment breakdown; weather; geographic concentration TBD
-Property Captive (Cayman),Business Interruption,200000,45.0%,90000,5.0%,4500,12-month BI; correlated with property triggers
-TOTAL,,262905000,68.9%,181019900,,9301400,Weighted target loss ratio across all lines
+Property Captive (Cayman),Property (Micro Hospitals + ASCs + POSHs),6210000,45.0%,2794500,5.0%,139725,87 facilities / TIV $3.315B; attritional frequency from active healthcare ops; cat exposure depends on geography (TBD)
+Property Captive (Cayman),Equipment Breakdown / B&M,200000,40.0%,80000,5.0%,4000,Imaging / OR / sterilization equipment failure; sublimit coverage
+TOTAL,,268515000,68.4%,183534400,,9427125,Weighted target loss ratio across all lines

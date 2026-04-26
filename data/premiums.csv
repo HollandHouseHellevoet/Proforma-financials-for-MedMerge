@@ -7,7 +7,9 @@ Casualty Captive (VT),Directors & Officers,Flat allocation,1,750000,750000,Group
 Casualty Captive (VT),Cyber Liability,Lives basis,20050,35,700000,PHI exposure; placeholder pending IT environment review
 Casualty Captive (VT),Auto Liability,Fleet vehicles,n/a,n/a,350000,Owned/non-owned auto for clinic operations
 Casualty Captive (VT),CASUALTY SUBTOTAL,,,,129775000,MedMal ~96% of Casualty captive premium
-Property Captive (Cayman),Property,Total Insured Value (TIV),300000000,0.20%,600000,Placeholder TIV; replace with actual SOV
-Property Captive (Cayman),Business Interruption,Included in TIV rate,,,200000,12-month BI on critical ASCs
-Property Captive (Cayman),PROPERTY SUBTOTAL,,,,800000,Strategic captive; small premium
-PROGRAM TOTAL,,,,,262905000,Y1 gross written premium across all 3 captives
+Property Captive (Cayman),Property - Micro Hospitals,TIV (27 facilities x $45M avg),1215000000,0.20%,2430000,$20M build + $7M equipment + $3M contents + $15M BI per facility
+Property Captive (Cayman),Property - Ambulatory Surgery Centers,TIV (50 facilities x $22M avg),1100000000,0.18%,1980000,$10M build + $5M equipment + $2M contents + $5M BI per ASC; lower rate reflects lower complexity
+Property Captive (Cayman),Property - Physician-Owned Surgical Hospitals,TIV (10 facilities x $100M avg),1000000000,0.18%,1800000,$50M build + $15M equipment + $8M contents + $25M BI per POSH; volume rate at this TIV
+Property Captive (Cayman),Equipment Breakdown / Boiler & Machinery,Sublimit on equipment exposure,n/a,n/a,200000,Healthcare equipment (imaging / OR / sterilization) failure coverage
+Property Captive (Cayman),PROPERTY SUBTOTAL,87 facilities / TIV $3.315B,87,blended 0.193%,6410000,Material captive; healthcare property at scale
+PROGRAM TOTAL,,,,,268515000,Y1 gross written premium across all 3 captives

@@ -38,8 +38,8 @@ Every material assumption used in the MedMerge captive proforma. Each entry tell
 | 3.5 | D&O premium | $750k flat | Mid-market healthcare D&O placement | `data/premiums.csv` |
 | 3.6 | Cyber rate | $35/life | PHI exposure; current market rates 2025–2026 | `data/premiums.csv` |
 | 3.7 | Auto premium | $350k | Small commercial fleet | `data/premiums.csv` |
-| 3.8 | Property TIV | $300M | **PLACEHOLDER — replace with actual SOV** (Statement of Values) | `data/premiums.csv` |
-| 3.9 | Property rate on TIV | 0.20% | Healthcare property benchmark for inland portfolios; will rise materially if any coastal/cat-exposed locations | `data/premiums.csv` |
+| 3.8 | Property TIV | ~$3.315B (87 facilities: 27 micro hospitals at ~$45M each, 50 ASCs at ~$22M each, 10 POSHs at ~$100M each) | Built from MedMerge-stated facility counts and build costs plus standard healthcare ratios (equipment ~25-35% of build, contents ~10-15% of build, 12-month BI scaled to facility revenue) | `data/premiums.csv` |
+| 3.9 | Property rate on TIV | Blended 0.193% (0.20% micro hospitals; 0.18% ASCs and POSHs) | Healthcare property benchmark for portfolios at this scale; geographic concentration TBD will refine final rate | `data/premiums.csv` |
 
 ## 4. Loss Ratios
 
@@ -65,7 +65,9 @@ Every material assumption used in the MedMerge captive proforma. Each entry tell
 | 5.3 | MedMal specific XOL | $500k per claim, $25M xs $500k | Captive retains primary; reinsurance fronts the severity tower | `data/reinsurance.csv` |
 | 5.4 | MedMal aggregate stop-loss | $50M annual aggregate, $25M limit | Caps frequency-driven adverse year | `data/reinsurance.csv` |
 | 5.5 | Other casualty XOL | $250k per occurrence, $5M xs $250k | Standard mid-market casualty tower | `data/reinsurance.csv` |
-| 5.6 | Property XOL + Cat | $1M per occurrence, $50M xs $1M | Sized to absorb single-event without surplus impairment | `data/reinsurance.csv` |
+| 5.6 | Property per-risk tower | $1M per occurrence, $24M xs $1M | Covers any single facility (ASC / micro hospital / most POSH exposure) at full insurable value | `data/reinsurance.csv` |
+| 5.6a | Property cat / excess tower | $25M attachment, $200M xs $25M | Excess layer above per-risk; sized comfortably above largest POSH valuation | `data/reinsurance.csv` |
+| 5.6b | Property aggregate stop-loss | $10M annual aggregate, $25M xs $10M | Hard ceiling on captive's annual property losses across all 87 facilities | `data/reinsurance.csv` |
 | 5.7 | Ceded premium ratios | 6–25% of GWP by line | Reinsurance pricing benchmark; **needs broker market check before bind** | `data/reinsurance.csv` |
 
 ## 6. Operating Expenses
@@ -75,7 +77,7 @@ Every material assumption used in the MedMerge captive proforma. Each entry tell
 | 6.1 | Health TPA / claims admin | 8.0% of GWP | Negotiated TPA fees for >20k-life self-funded plan | `data/projection_3yr.csv` |
 | 6.2 | Health captive operating expenses | $750k Y1 | Captive manager + actuary + audit + regulator (MT) | `data/projection_3yr.csv` |
 | 6.3 | Casualty captive operating expenses | $1.5M Y1 | Higher fees for MedMal claims handling, actuarial reserving, audit | `data/projection_3yr.csv` |
-| 6.4 | Property captive operating expenses | $200k Y1 | Lean Cayman cell | `data/projection_3yr.csv` |
+| 6.4 | Property captive operating expenses | $400k Y1 | Cayman cell scaled for material 87-facility book; manager + audit + actuary + engineering survey | `data/projection_3yr.csv` |
 | 6.5 | Captive opex trend | 3.0%/year | General inflation | `data/projection_3yr.csv` |
 | 6.6 | Health TPA trend | 5.2%/year | TPA fees rise with claims volume + inflation | `data/projection_3yr.csv` |
 
@@ -103,8 +105,8 @@ Every material assumption used in the MedMerge captive proforma. Each entry tell
 |---|---|---|---|---|
 | 9.1 | Health Captive working capital Y1 | $10M | ~8% of net retained premium for short-tail line; **incremental funding only** if existing MT captive already holds surplus | `data/capitalization.csv` |
 | 9.2 | Casualty Captive working capital Y1 | $25M | Sized for long-tail MedMal: $22.5M MedMal pool + $2.5M short-tail casualty pool | `data/capitalization.csv` |
-| 9.3 | Property Captive working capital Y1 | $750k | 1.25x net retained premium; sized to absorb 1–2 retentions | `data/capitalization.csv` |
-| 9.4 | Total initial capital injection | $35.75M | Sum of working capital across all 3 captives | `data/capitalization.csv` |
+| 9.3 | Property Captive working capital Y1 | $5.0M | Sized for 87-facility / $3.3B TIV portfolio with $1M per-occurrence and $10M annual aggregate retentions; supports collateral capacity for facility capex | `data/capitalization.csv` |
+| 9.4 | Total initial capital injection | $40.0M | Sum of working capital across all 3 captives | `data/capitalization.csv` |
 | 9.5 | Premium-to-surplus target — short-tail | 5:1 maturing | Health and short-tail casualty | `data/capitalization.csv` |
 | 9.6 | Premium-to-surplus target — long-tail (MedMal) | 1.5:1 maturing | MedMal requires substantially more capital backing | `data/capitalization.csv` |
 
@@ -118,20 +120,20 @@ Every material assumption used in the MedMerge captive proforma. Each entry tell
 | 10.4 | Property trend | 3.0% | Hard market moderating | `data/projection_3yr.csv` |
 | 10.5 | Loss ratio trend | Held flat at target | Assumes pricing keeps pace with loss trend | `data/losses.csv` |
 
-## 11. Items Explicitly Flagged for Professional Review
+## 11. Inputs to Validate During Implementation
 
-These are the items that **must** be validated before binding any coverage:
+These are confirmed through standard professional workstreams during the typical 4–6 month implementation:
 
-1. **Specialty roster** — replace placeholder distribution with actual surgeon-by-specialty census; MedMal premium is most sensitive to this single input
-2. **Property TIV / SOV** — placeholder $300M needs to be replaced with verified Statement of Values; property captive premium scales linearly
-3. **Existing Montana cell starting surplus** — proforma assumes Y1 fresh-start; user to overlay any existing surplus carrying forward
-4. **Workers Compensation** — not included by default (state-regulated, monopolistic states are different); user can add
-5. **Actuarial certification** — required pre-bind for Health (IBNR + reserve adequacy) and MedMal (loss reserves, premium adequacy, capital adequacy)
-6. **Feasibility study** — required by Vermont and Cayman regulators before licensing the new entities; typically 6–10 weeks
-7. **Tax opinion** — IRC §831 risk-distribution analysis if seeking captive insurance company tax treatment; multi-line, multi-insured structure helps but must be opined
-8. **Reinsurance broker market check** — every ceded-premium and structure assumption needs real quotes; today's market for MedMal severity capacity may price meaningfully above modeled
-9. **State licensing for MedMal RRG** — if Vermont RRG path chosen, must register in every state where physicians practice
-10. **§953(d) election** — for the Cayman property captive, evaluate whether to elect U.S. tax treatment to avoid FET and improve deductibility
+1. **Specialty roster** — confirm actual surgeon-by-specialty census; MedMal premium is most sensitive to this single input
+2. **Property SOV** — formal asset-by-asset Statement of Values across the 87-facility portfolio refines the working TIV estimate
+3. **Existing Montana cell starting surplus** — captive manager confirms whether existing surplus carries forward or Y1 funding is fully incremental
+4. **Workers Compensation scope** — risk manager + WC counsel decide on inclusion in Casualty captive
+5. **Actuarial opinions** — health IBNR certification and MedMal Statement of Actuarial Opinion are standard regulator requirements
+6. **Feasibility studies** — standard Vermont and Cayman pre-licensing workstreams (6–10 weeks each)
+7. **Tax opinion** — standard IRC §831 risk-distribution opinion for multi-line captive structures
+8. **Reinsurance broker market check** — every ceded-premium ratio confirmed via real quotes from RI brokers
+9. **State licensing for MedMal RRG** — Vermont RRG framework registers in every state where physicians practice
+10. **§953(d) election** — tax counsel evaluates U.S. tax treatment election for the Cayman property captive
 
 ## 12. Out-of-Scope (not in this proforma)
 
