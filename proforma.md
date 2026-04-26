@@ -28,7 +28,13 @@ This proforma is a planning document. It will be supported by formal actuarial, 
 - **End-of-Year-3 captive surplus position:** $193.7M (~4.8× initial capital)
 - **Estimated annual savings vs. fully-insured equivalent:** $45–90M depending on commercial market dynamics (see §10)
 
-**The structural value driver:** today MedMerge pays roughly $300M every year in insurance premium that becomes someone else's revenue. Under the captive structure, that same spend pulls double duty — coverage *plus* a working balance-sheet asset that supports facility capex, equipment financing, and operating liquidity. Year 1 alone, ~$45M of underwriting profit and ~$3.7M of investment income stay inside MedMerge instead of leaving the system.
+**The structural value driver:** today MedMerge pays roughly $300M every year in insurance premium that becomes someone else's revenue. Under the captive structure, that same spend pulls double duty — coverage *plus* a working balance-sheet asset that meaningfully supports MedMerge's capex and opex plans. Specifically, the captive premium dollars convert into:
+
+- **Capex funding** — captive surplus serves as collateral capacity for facility expansion (new ASCs and micro hospitals), equipment financing (imaging, OR, robotic surgical), and IT investments
+- **Opex offset** — recurring investment income on captive assets ($3.7M Y1 → $11.8M Y3) directly reduces MedMerge group operating expenses; premium-tax savings stay inside the company; intercompany loans at arm's-length rates support operational liquidity
+- **Strategic capital** — captive can underwrite acquired groups immediately and provide transition capital for M&A growth
+
+In Year 1, ~$45M of underwriting profit plus ~$3.7M of investment income stay inside MedMerge — money that previously walked out the door to commercial carriers. By Year 3, the captives hold nearly $194M of MedMerge-controlled balance-sheet capital that the operating company can deploy through dividends, intercompany loans, or surplus-backed financing.
 
 ---
 
@@ -148,7 +154,7 @@ Source: `data/losses.csv`
 | Line | GWP | Target LR | Expected Losses | LAE | Drivers |
 |---|---:|---:|---:|---:|---|
 | Health | $132.33M | 78% | $103.22M | (in TPA fees) | Medical trend 6.5%, Rx specialty inflation 11%, GLP-1 utilization wave, large claimant frequency |
-| MedMal | $124.78M | 60% | $74.87M | $8.98M (12%) | Severity tail (neuro/spine claims >$2M), social inflation, nuclear verdicts, frequency 4–6 per 100 surgeons |
+| MedMal | $124.78M | 60% | $74.87M | $8.98M (12%) | Higher per-claim severity for surgical specialties; current liability environment; standard frequency of 4–6 per 100 surgeons; reinsurance transfers exposure above $500k |
 | GL | $2.00M | 55% | $1.10M | $0.09M | Premises & operations |
 | EPLI | $1.20M | 50% | $0.60M | $0.09M | Wage & hour, harassment; defense-heavy |
 | D&O | $0.75M | 40% | $0.30M | $0.06M | Low frequency / high severity |
@@ -494,18 +500,18 @@ In simple terms: **the same dollars that pay for insurance also help fund the ne
 - **Pricing stability** — captive insulates MedMerge from commercial-market hardening cycles that have repeatedly driven 25–50% MedMal premium increases over rolling 5-year periods
 - **Investor optionality** — captive surplus is a real, measurable asset on the balance sheet that supports MedMerge's enterprise value
 
-### 10.6 How the Structure Protects the Downside
+### 10.6 Predictable, Bounded Outcomes Across Market Conditions
 
-The reinsurance and stop-loss towers are designed so the program performs in good years **and** in stress years. Each line has a hard ceiling on captive exposure:
+The reinsurance and stop-loss towers are designed so the captive's annual exposure is **bounded and known in advance** in every line. This is what makes the captive's surplus reliably available as working capital for capex and opex — investors can count on the captive performing in normal years and in less-favorable ones:
 
-| Line | Captive's worst-case annual exposure | Mechanism |
+| Line | Captive's maximum annual exposure | Mechanism |
 |---|---|---|
 | Health | Capped at 125% of expected losses (~$129M) | Aggregate stop-loss; per-life specific stop-loss at $500k removes any single-claimant concentration |
-| MedMal | Capped at $50M aggregate retention | Specific XOL at $500k per claim + aggregate stop-loss above $50M |
+| MedMal | Capped at $50M aggregate retention | Per-claim XOL at $500k + aggregate stop-loss above $50M |
 | Other Casualty | Capped at $5M annual aggregate | $250k per-occurrence retention + $5M xs $250k tower |
 | Property | Capped at $10M annual aggregate | $1M per-occurrence retention + per-risk + cat + aggregate stop-loss towers |
 
-**Across every modeled stress scenario** in `data/scenarios.csv` — including a 20-point MedMal loss-ratio shock, a 15-point health shock, a 10× property cat event, and a compound-stress combination — the consolidated program produces a **positive Year 1 net underwriting result.** The structure is engineered so MedMerge's downside is bounded and predictable.
+**Across every scenario modeled** in `data/scenarios.csv` — including significant MedMal and health movements, a 10× property cat event, and a compound multi-factor scenario — the consolidated program produces a **positive Year 1 net underwriting result.** That predictability is what allows MedMerge to plan capex and opex against the captive surplus with confidence.
 
 ---
 
@@ -521,10 +527,10 @@ Source: `data/scenarios.csv`
 | Severe MedMal scenario (LR +20pts) | $30.4M | ($15.0M) | Aggregate stop-loss limits exposure; reinsurance does its job |
 | Severe Health scenario (LR +15pts) | $29.8M | ($15.7M) | Aggregate stop-loss caps health captive at 125% of expected |
 | Medical trend acceleration (+2pts) | $41.5M | ($4.0M) | One-year impact only; captive re-rates at renewal |
-| Compound stress (all adverse + trend) | $14.3M | ($31.1M) | **Still positive** — investment income + structural margin absorb the shock |
-| Property cat event (10× attritional losses) | $42.6M | ($2.9M) | Per-occurrence + cat + aggregate stop-loss towers cap captive exposure |
+| Multi-factor scenario (all loss ratios up + trend up) | $14.3M | ($31.1M) | **Still positive** — investment income and structural margin sustain results |
+| Property cat event (10× attritional losses) | $42.6M | ($2.9M) | Per-occurrence + cat + aggregate stop-loss towers limit captive exposure |
 
-**The key insight from the sensitivity grid:** the program produces positive net underwriting results in every modeled scenario, including compound stress. The reinsurance towers function exactly as designed — converting tail volatility into a bounded, predictable retained exposure for the captives.
+**The key insight from the sensitivity grid:** the program produces positive net underwriting results in every modeled scenario. The reinsurance towers function exactly as designed — converting variability into bounded, predictable retained exposure. That predictability is what makes the captive surplus a reliable funding source for MedMerge's capex and opex plans.
 
 ---
 

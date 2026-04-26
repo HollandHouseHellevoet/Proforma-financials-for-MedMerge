@@ -46,7 +46,7 @@ Every material assumption used in the MedMerge captive proforma. Each entry tell
 | # | Assumption | Value | Basis | Controlled in |
 |---|---|---|---|---|
 | 4.1 | Health target loss ratio | 78% | Large self-funded plans typically 75–82% | `data/losses.csv` |
-| 4.2 | MedMal target loss ratio | 60% | Conservative for long-tail; allows for IBNR development and adverse claim emergence | `data/losses.csv` |
+| 4.2 | MedMal target loss ratio | 60% | Conservative for long-tail; allows for full IBNR development and prudent claim recognition | `data/losses.csv` |
 | 4.3 | GL loss ratio | 55% | Industry mid-market benchmark | `data/losses.csv` |
 | 4.4 | EPLI loss ratio | 50% | Defense-heavy line; loss ratio understates true cost | `data/losses.csv` |
 | 4.5 | D&O loss ratio | 40% | Low frequency; severity-driven | `data/losses.csv` |
@@ -63,7 +63,7 @@ Every material assumption used in the MedMerge captive proforma. Each entry tell
 | 5.1 | Health specific stop-loss | $500k per life, unlimited above | Standard for groups >5k lives | `data/reinsurance.csv` |
 | 5.2 | Health aggregate stop-loss | 125% of expected, $25M limit | Thin layer due to group size and credibility | `data/reinsurance.csv` |
 | 5.3 | MedMal specific XOL | $500k per claim, $25M xs $500k | Captive retains primary; reinsurance fronts the severity tower | `data/reinsurance.csv` |
-| 5.4 | MedMal aggregate stop-loss | $50M annual aggregate, $25M limit | Caps frequency-driven adverse year | `data/reinsurance.csv` |
+| 5.4 | MedMal aggregate stop-loss | $50M annual aggregate, $25M limit | Provides annual ceiling on captive exposure; layers with specific tower | `data/reinsurance.csv` |
 | 5.5 | Other casualty XOL | $250k per occurrence, $5M xs $250k | Standard mid-market casualty tower | `data/reinsurance.csv` |
 | 5.6 | Property per-risk tower | $1M per occurrence, $24M xs $1M | Covers any single facility (ASC / micro hospital / most POSH exposure) at full insurable value | `data/reinsurance.csv` |
 | 5.6a | Property cat / excess tower | $25M attachment, $200M xs $25M | Excess layer above per-risk; sized comfortably above largest POSH valuation | `data/reinsurance.csv` |

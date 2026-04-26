@@ -16,7 +16,7 @@ A multi-line captive insurance proforma for MedMerge's physician group, white-co
 - **End-Year-3 captive surplus:** $193.7M (~4.8× initial capital — collateralizable working capital)
 - **Estimated Year 1 value vs. fully insured:** ~$93M (~$48M premium savings + $45M U/W profit retained)
 
-The captive surplus is not idle reserve — it serves as collateral capacity for facility expansion, equipment financing, and operational liquidity, and the investment income earned on captive assets directly offsets MedMerge group operating expenses.
+**The same premium dollars that fund MedMerge's coverage also significantly support capex and opex.** Captive surplus serves as collateral capacity for facility expansion (new ASCs and micro hospitals) and equipment financing; recurring investment income directly offsets group operating expenses; and the structure provides intercompany liquidity, premium-tax savings, and M&A growth capital — none of which exist under a fully insured arrangement.
 
 ---
 

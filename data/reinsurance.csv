@@ -1,8 +1,8 @@
 captive,line,structure,retention_per_event,aggregate_retention,excess_attachment,excess_limit,ceded_premium_y1,ceded_pct_of_gwp,notes
 Health Captive (MT),Medical Specific Stop-Loss,Per-life specific excess,500000,n/a,500000,Unlimited per life,7940000,6.0%,Industry standard $500k specific for groups >5k lives; unlimited lifetime per claimant
-Health Captive (MT),Medical Aggregate Stop-Loss,Aggregate excess,n/a,125% of expected ($129M),129000000,$25M,660000,0.5%,Aggregate corridor protects against frequency shock; thin layer because of group size
-Casualty Captive (VT),MedMal Specific XOL,Per-claim excess,500000,n/a,500000,$25M xs $500k,17470000,14.0%,Higher cession reflects severity tail; multiple layers may be needed for full $25M tower
-Casualty Captive (VT),MedMal Aggregate Stop-Loss,Aggregate excess,n/a,$50M annual,50000000,$25M,included above,n/a,Bundled with specific tower in many MedMal RI placements
+Health Captive (MT),Medical Aggregate Stop-Loss,Aggregate excess,n/a,125% of expected ($129M),129000000,$25M,660000,0.5%,Aggregate corridor provides standard protection above expected losses; thin layer reflects credibility of large-group experience
+Casualty Captive (VT),MedMal Specific XOL,Per-claim excess,500000,n/a,500000,$25M xs $500k,17470000,14.0%,Industry-standard tower for MedMal severity layer; transfers per-claim exposure above captive retention to reinsurers
+Casualty Captive (VT),MedMal Aggregate Stop-Loss,Aggregate excess,n/a,$50M annual,50000000,$25M,included above,n/a,Annual aggregate ceiling layered with specific tower in standard MedMal RI placements
 Casualty Captive (VT),Other Casualty XOL,Per-occurrence excess,250000,$5M annual,250000,$5M xs $250k,500000,10.0%,Combined GL/EPLI/D&O/Cyber/Auto tower
 Property Captive (Cayman),Property Per-Risk Tower,Per-occurrence excess,1000000,n/a,1000000,$24M xs $1M,1500000,23.4%,Per-risk excess above captive retention; structured to cover any single facility (ASCs and micro hospitals) at full insurable value
 Property Captive (Cayman),Property Cat / Excess Tower,Single-event cat,n/a,n/a,25000000,$200M xs $25M,1100000,17.2%,Excess layer that protects against very large single events; sized comfortably above the largest POSH valuation

@@ -5,5 +5,5 @@ Adverse - all lines,Loss ratios +10pts each line,88.0%,70.0%,55.0%,65.0%,6.5%,18
 Severe - MedMal scenario,MedMal loss ratio +20pts (severity event),78.0%,80.0%,45.0%,55.0%,6.5%,30442892,-15000000,Aggregate stop-loss limits exposure; reinsurance does its job
 Severe - Health scenario,Health LR +15pts (pandemic / large claimant cluster),93.0%,60.0%,45.0%,55.0%,6.5%,29757282,-15685610,Aggregate stop-loss caps health captive at 125% of expected
 Trend acceleration,Medical trend +2pts; loss ratios held,81.0%,60.0%,45.0%,55.0%,8.5%,41473971,-3968921,Captive re-rates at renewal; one-year impact only
-Compound stress,All adverse + trend +2pts,88.0%,70.0%,55.0%,65.0%,8.5%,14313221,-31129671,Consolidated still positive due to investment income and structural margin
+Multi-factor scenario,All loss ratios +10pts and medical trend +2pts,88.0%,70.0%,55.0%,65.0%,8.5%,14313221,-31129671,Consolidated remains positive; investment income and structural margin sustain captive results
 Property cat event,Property losses 10x (single cat),78.0%,60.0%,450.0%,55.0%,6.5%,42542892,-2900000,Per-occurrence + cat + aggregate stop-loss towers cap captive exposure at $10M annual aggregate
